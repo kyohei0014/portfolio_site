@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}ポートフォリオ{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">トップ</a> |
+        <a href="{{ url_for('about') }}">自己紹介</a> |
+
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
+

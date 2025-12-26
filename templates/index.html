@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}私のポートフォリオ{% endblock %}
+
+{% block content %}
+<h1>私のポートフォリオ</h1>
+<p style="text-align:center;">自己紹介や制作物をこちらで紹介します</p>
+
+<h2>制作物一覧</h2>
+<div class="projects">
+    <!-- 制作物カード1：タスク管理アプリ -->
+   <div class="card">
+    <img src="{{ url_for('static', filename='images/task_app.png') }}" alt="タスク管理アプリ">
+    <!-- 直接 URL に飛ばす -->
+    <a href="http://127.0.0.1:5000" target="_blank">タスク管理アプリ</a>
+    <p>Python / Flask / SQLite を使ったタスク管理アプリ。タスクの追加・編集・完了切替が可能。</p>
+</div>
+
+
+    <!-- 制作物カード2（例） -->
+    <div class="card">
+        <img src="{{ url_for('static', filename='images/project2.png') }}" alt="プロジェクト2">
+        <a href="#" target="_blank">プロジェクト2</a>
+        <p>説明文をここに記載します。どんな技術を使ったかや特徴を簡単に。</p>
+    </div>
+</div>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 10px;
+    }
+    h1, h2 {
+        text-align: center;
+    }
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 15px;
+        width: 250px;
+        text-align: center;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    }
+    .card img {
+        max-width: 100%;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+    .card a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+    }
+    .card a:hover {
+        text-decoration: underline;
+    }
+</style>
+{% endblock %}
+
+
+
+
+
+
